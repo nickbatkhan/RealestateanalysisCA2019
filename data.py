@@ -97,31 +97,12 @@ ca_real_estate_df.rename(columns = {"Sqft": "Sqft/A"}, inplace = True)
 ca_real_estate_df[["LSqft", "Ac"]] = ca_real_estate_df['LSqft/Ac'].str.split('/', expand = True).replace('[\$,]','',regex=True).astype(float)
 
 
-# In[16]:
 
 
-ca_real_estate_df.info()
+real_estate_df = ca_real_estate_df
 
+real_estate_df = pd.DataFrame(real_estate_df)
 
-# In[17]:
-
-
-ca_real_estate_df
-
-
-# In[18]:
-
-
-ca_real_estate_df.info()
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
 
 
 
